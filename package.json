@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon src/ts-class.ts"
+    "start": "nodemon src/generic.ts"
   },
   "keywords": [],
   "author": "",
