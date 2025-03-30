@@ -1,2 +1,2 @@
 ## Typescript
-tsconfig description
+tsconfig description with chinese.
