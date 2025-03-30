@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build": "tsc",
-    "start": "nodemon src/tuple_enum.ts"
+    "start": "nodemon src/interface.ts"
   },
   "keywords": [],
   "author": "",
