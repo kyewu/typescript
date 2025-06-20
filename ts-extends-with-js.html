@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ts-es6-extends</title>
+  </head>
+  <body>
+    <script>
+      function Vehicle(name) {
+        this.name = name;
+      }
+      Vehicle.prototype.getName = function () {
+        return this.name;
+      };
+
+      function Car(name, price) {
+        Vehicle.apply(this, [name]);
+        // Vehicle.call(this, name);
+        this.price = price;
+      }
+
+      // 寄生式继承
+
+      function middleWare(parentClass, sonChildClass) {
+        function Middle() {
+          this.constructor = sonChildClass;
+        }
+        Middle.prototype = parentClass.prototype;
+        sonChildClass.prototype = new Middle();
+      }
+
+      middleWare(Vehicle, Car);
+
+      const car = new Car('car', 100);
+      console.log(car)
+    </script>
+  </body>
+</html>
